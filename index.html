@@ -1,0 +1,59 @@
+<html>
+  <!-- Html markup -->
+<body>
+  <input id="n" type="number">
+  th __ number is:
+  <input id="x" type="number">
+  <br><br>
+  <button onclick = "even (n,x)">even</button>
+  <button onclick = "odd (n,x)">odd</button>
+  <button onclick = "prime (n,x)">prime</button>
+  <button onclick = "factioralWrapper (n,x)">factioral</button>
+  <button onclick = "fibonnociaWrapper (n,x)">fibnnocia</button>
+</body>
+</html>
+
+<script>
+//jAVA lang//
+  function even (n,x)
+  { x.value = n.value *2;
+  }
+  // return the nth even number into x
+  
+  function odd (n,x)
+  { x.value = n.value *2-1
+  }
+  
+  function isPrime(n){
+    var current =2;
+    if (n < 2) { return false;}
+    while (current < Math.sqrt(n)){
+      if (n% current ==0){
+      return false;
+    }
+    current = current +1
+    }
+    return true;
+  }
+  
+  function prime(n,x){
+  var count= 0;
+  var curr=1;
+  while (count <n.value) {
+    if (isPrime(curr)){
+      count=count+1
+    }
+  curr=curr +1;
+    }
+    x.value=curr-1;
+  }
+</script>
+
+
+
+<style>
+/*CSS styling lang*/
+  input{
+    width:5em;
+  }
+</style>
