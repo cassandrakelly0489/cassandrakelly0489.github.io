@@ -8,7 +8,7 @@
   <button onclick = "even (n,x)">even</button>
   <button onclick = "odd (n,x)">odd</button>
   <button onclick = "prime (n,x)">prime</button>
-  <button onclick = "factioralWrapper (n,x)">factioral</button>
+  <button onclick = "factorialWrapper (n,x)">factorial</button>
   <button onclick = "fibonnociaWrapper (n,x)">fibnnocia</button>
 </body>
 </html>
@@ -46,6 +46,15 @@
   curr=curr +1;
     }
     x.value=curr-1;
+  }
+  
+  function factorial (n){
+    if (n==1) return 1;
+    return factorial (n-1) *n;
+  }
+  
+  function factorialWrapper(n,x){
+    x.value=factorial(n.value);
   }
 </script>
 
